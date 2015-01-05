@@ -1,6 +1,12 @@
 Adafruit LSM9DS0 Library
 ========================
 
+This is a stripped-down, objectified and abused version of the original Adafruit
+LSM9DS0 library by Tony DiCola
+(https://github.com/adafruit/Adafruit_LSM9DS0_Library). 
+
+Original README follows.
+
 This is a library for the Adafruit triple-axis accelerometer/magnetometer/gyroscope LSM9DS0 breakouts
 
 Designed specifically to work with the Adafruit LSM9DS0 Breakout & Flora Sensor
