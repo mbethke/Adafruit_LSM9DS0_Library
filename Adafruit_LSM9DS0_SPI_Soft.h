@@ -4,7 +4,7 @@
 #include <Adafruit_LSM9DS0.h>
 #include <SPI.h>
 
-class Adafruit_LSM9DS0_SPI_Soft : Adafruit_LSM9DS0
+class Adafruit_LSM9DS0_SPI_Soft : public Adafruit_LSM9DS0
 {
     public:
         Adafruit_LSM9DS0_SPI_Soft ( int8_t clk, int8_t miso, int8_t mosi, int8_t xmcs, int8_t gcs );

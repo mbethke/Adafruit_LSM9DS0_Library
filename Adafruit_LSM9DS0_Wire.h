@@ -4,7 +4,7 @@
 #include "Adafruit_LSM9DS0.h"
 #include <Wire.h>
 
-class Adafruit_LSM9DS0_Wire : Adafruit_LSM9DS0
+class Adafruit_LSM9DS0_Wire : public Adafruit_LSM9DS0
 {
 	public:
 		Adafruit_LSM9DS0_Wire ( int32_t sensorID = 0 );

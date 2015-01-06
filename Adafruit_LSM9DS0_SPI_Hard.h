@@ -4,7 +4,7 @@
 #include <Adafruit_LSM9DS0.h>
 #include <SPI.h>
 
-class Adafruit_LSM9DS0_SPI_Hard : Adafruit_LSM9DS0
+class Adafruit_LSM9DS0_SPI_Hard : public Adafruit_LSM9DS0
 {
     public:
         Adafruit_LSM9DS0_SPI_Hard ( int8_t xmcs, int8_t gcs );
