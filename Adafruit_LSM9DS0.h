@@ -170,16 +170,15 @@ class Adafruit_LSM9DS0
     void    setupAccel  ( lsm9ds0AccelRange_t range );
     void    setupMag    ( lsm9ds0MagGain_t gain );
     void    setupGyro   ( lsm9ds0GyroScale_t scale );
-    byte    read8       ( boolean type, byte reg);
-    virtual byte    readBuffer  ( boolean type, byte reg, byte len, uint8_t *buffer);
-    virtual uint8_t spixfer     ( uint8_t data );
     
   protected:
-    bool    begin_common( void );
-    virtual void write8 ( boolean type, byte reg, byte value );
-    float   _accel_mg_lsb;
-    float   _mag_mgauss_lsb;
-    float   _gyro_dps_digit;
+    bool begin_common( void );
+    byte read8  ( boolean type, byte reg);
+    virtual void write8 ( boolean type, byte reg, byte value ) = 0;
+    virtual byte readBuffer ( boolean type, byte reg, byte len, uint8_t *buffer) = 0;
+    float _accel_mg_lsb;
+    float _mag_mgauss_lsb;
+    float _gyro_dps_digit;
 };
 
 #endif
