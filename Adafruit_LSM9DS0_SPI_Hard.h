@@ -18,7 +18,6 @@ class Adafruit_LSM9DS0_SPI_Hard : public Adafruit_LSM9DS0
         byte    readBuffer  ( boolean type, byte reg, byte len, uint8_t *buffer);
 
         int8_t  _csg, _csxm;
-        uint8_t mySPCR, SPCRback;
 };
 
 #endif // __LSM9DS0_SPI_HARD_H__
