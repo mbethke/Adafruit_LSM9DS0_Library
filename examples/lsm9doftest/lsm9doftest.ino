@@ -1,14 +1,13 @@
 #include <Wire.h>
 #include <SPI.h>
-#include <Adafruit_LSM9DS0.h>
+#include <Adafruit_LSM9DS0_SPI_Hard.h>
 
 // i2c
-//Adafruit_LSM9DS0 lsm = Adafruit_LSM9DS0();
-
+//Adafruit_LSM9DS0_Wire lsm = Adafruit_LSM9DS0_Wire();
 // You can also use software SPI
-//Adafruit_LSM9DS0 lsm = Adafruit_LSM9DS0(13, 12, 11, 10, 9);
+//Adafruit_LSM9DS0_SPI_Soft lsm = Adafruit_LSM9DS0_SPI_Soft(13, 12, 11, 10, 9);
 // Or hardware SPI! In this case, only CS pins are passed in
-Adafruit_LSM9DS0 lsm = Adafruit_LSM9DS0(10, 9);
+Adafruit_LSM9DS0_SPI_Hard lsm = Adafruit_LSM9DS0_SPI_Hard(9, 8);
 
 void setupSensor()
 {
