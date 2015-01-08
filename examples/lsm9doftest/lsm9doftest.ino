@@ -52,13 +52,14 @@ void loop()
 {
   lsm.read();
 
+  Serial.print("\e[2J\e[;H");
   Serial.print("Accel X: "); Serial.print((int)lsm.accelData.x); Serial.print(" ");
   Serial.print("Y: "); Serial.print((int)lsm.accelData.y);       Serial.print(" ");
-  Serial.print("Z: "); Serial.println((int)lsm.accelData.z);     Serial.print(" ");
-  Serial.print("Mag X: "); Serial.print((int)lsm.magData.x);     Serial.print(" ");
+  Serial.print("Z: "); Serial.println((int)lsm.accelData.z);
+  Serial.print("  Mag X: "); Serial.print((int)lsm.magData.x);     Serial.print(" ");
   Serial.print("Y: "); Serial.print((int)lsm.magData.y);         Serial.print(" ");
-  Serial.print("Z: "); Serial.println((int)lsm.magData.z);       Serial.print(" ");
-  Serial.print("Gyro X: "); Serial.print((int)lsm.gyroData.x);   Serial.print(" ");
+  Serial.print("Z: "); Serial.println((int)lsm.magData.z);
+  Serial.print(" Gyro X: "); Serial.print((int)lsm.gyroData.x);   Serial.print(" ");
   Serial.print("Y: "); Serial.print((int)lsm.gyroData.y);        Serial.print(" ");
   Serial.print("Z: "); Serial.println((int)lsm.gyroData.z);      Serial.println(" ");
   Serial.print("Temp: "); Serial.print((int)lsm.temperature);    Serial.println(" ");
